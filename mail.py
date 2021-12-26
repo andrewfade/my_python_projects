@@ -10,7 +10,7 @@ from cre import password
 
 
 
-SLACK_TOKEN = "xoxb-2572517303696-2882973317552-mrEDnu9lGRsnaGUhkqwHVBs6"
+SLACK_TOKEN = "xxxxxxxxxx"
 client = slack.WebClient(token = SLACK_TOKEN)
 
 SCOPES = ['https://www.googleapis.com/auth/spreadsheets']
@@ -20,7 +20,7 @@ creds = None
 creds = service_account.Credentials.from_service_account_file(
         SERVICE_ACCOUNT_FILE, scopes=SCOPES)
 
-SAMPLE_SPREADSHEET_ID = '1LCOnJh_qlJl2fJTXVxq6YOxFDnX79FeyDvfu12SKqqc'
+SAMPLE_SPREADSHEET_ID = 'xxxxxxx'
 SAMPLE_RANGE_NAME = 'Form Yanıtları 1!A2:C'
 
 service = build('sheets', 'v4', credentials=creds)
@@ -45,11 +45,11 @@ while True :
         mail =  smtplib.SMTP("smtp.gmail.com",587)  
         mail.ehlo() 
         mail.starttls()
-        mail.login("andrewfade41@gmail.com",password) 
+        mail.login("xxxxx",password) 
     
         for i in range(-1,ranger-1,-1) : 
             mesaj = MIMEMultipart()  
-            mesaj["From"] =  "andrewfade41@gmail.com" 
+            mesaj["From"] =  "xxxxxxxx" 
             mesaj["To"] = liste[i][-1] 
             mesaj["Subject"] = "Smtp Mail Gönderme" 
             yazi = f"Merhaba, {liste[i][-2].upper()} Python ile mail gönderiyorum. {liste[i][-1]} sisteme eklendi. Sisteme eklenen {liste.index(liste[i])+1}. kişisiniz. teşekkür ederim."  
