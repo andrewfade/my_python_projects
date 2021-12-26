@@ -20,12 +20,12 @@ def open_mail() :
     mail =  smtplib.SMTP("smtp.gmail.com",587)  
     mail.ehlo() 
     mail.starttls()
-    mail.login("andrewfade41@gmail.com",password)
+    mail.login("xxxxxxxx",password)
     return mail
 
 def send_mail(to, body, mail) :
     mesaj = MIMEMultipart()  
-    mesaj["From"] =  "andrewfade41@gmail.com" 
+    mesaj["From"] =  "xxxxxxxxx@gmail.com" 
     mesaj["To"] = to
     mesaj["Subject"] = "Smtp Mail Gönderme" 
     mesaj_govdesi =  MIMEText(body,"plain") 
@@ -57,7 +57,7 @@ def log() :
 def slack_call() :
     client.chat_postMessage(channel="#test", text = yazi)
     pass
-SLACK_TOKEN = "xoxb-2572517303696-2882973317552-mrEDnu9lGRsnaGUhkqwHVBs6"
+SLACK_TOKEN = "xxxxxxxxx"
 client = slack.WebClient(token = SLACK_TOKEN)
 
 SCOPES = ['https://www.googleapis.com/auth/spreadsheets']
@@ -67,7 +67,7 @@ creds = None
 creds = service_account.Credentials.from_service_account_file(
         SERVICE_ACCOUNT_FILE, scopes=SCOPES)
 
-SAMPLE_SPREADSHEET_ID = '1LCOnJh_qlJl2fJTXVxq6YOxFDnX79FeyDvfu12SKqqc'
+SAMPLE_SPREADSHEET_ID = 'xxxxxxxxx'
 SAMPLE_RANGE_NAME = 'Form Yanıtları 1!A2:C'
 
 service = build('sheets', 'v4', credentials=creds)
