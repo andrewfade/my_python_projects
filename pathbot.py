@@ -6,7 +6,7 @@ import time
 
 
 
-SLACK_TOKEN = "xoxb-2424764285255-2872526286838-4XxBuNx0GY3xTrV3ctMwrQES"
+SLACK_TOKEN = "xxxxxxxxx"
 client = slack.WebClient(token = SLACK_TOKEN)
 
 SCOPES = ['https://www.googleapis.com/auth/spreadsheets']
@@ -16,7 +16,7 @@ creds = None
 creds = service_account.Credentials.from_service_account_file(
         SERVICE_ACCOUNT_FILE, scopes=SCOPES)
 
-SAMPLE_SPREADSHEET_ID = '1hw_C5tfi089BtX-k0U6Hw3skN4EAGjlC_qeMRVxlioc'
+SAMPLE_SPREADSHEET_ID = 'xxxxxxxxx'
 SAMPLE_RANGE_NAME = 'Form Responses 1!E2:E'
 
 service = build('sheets', 'v4', credentials=creds)
